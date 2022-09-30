@@ -51,6 +51,17 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -62,25 +73,6 @@ body {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.header {
-  background-color: var(--background-color1);
-}
-
-.connection-link {
-  display: flex;
-  align-items: center;
-  column-gap: 10px;
-}
-
-.connection-link:hover .connection-icon,
-.connection-link:focus .connection-icon {
-  fill: var(--hoverfocus-color);
-}
-
-.connection-icon {
-  fill: var(--foreground-color2);
 }
 
 .page-header,
@@ -95,24 +87,8 @@ body {
   column-gap: 94px;
 }
 
-.header .site-nav,
-.header .contacts-nav {
-  column-gap: 50px;
-}
-
-.header .contacts-nav {
-  margin-left: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+.header {
+  background-color: var(--background-color1);
 }
 
 .header .logo {
@@ -131,6 +107,30 @@ body {
 
 .logo-web {
   color: var(--hoverfocus-color);
+}
+
+.header .site-nav,
+.header .contacts-nav {
+  column-gap: 50px;
+}
+
+.header .contacts-nav {
+  margin-left: auto;
+}
+
+.connection-link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.connection-icon {
+  fill: var(--foreground-color2);
+}
+
+.connection-link:hover .connection-icon,
+.connection-link:focus .connection-icon {
+  fill: var(--hoverfocus-color);
 }
 
 /*підвищив специфічність до трьох тегів,
@@ -246,7 +246,7 @@ body {
 }
 
 .our-socials-item-icon {
-  fill: var(--foreground-color3)
+  fill: var(--foreground-color3);
 }
 
 .our-socials-item-link:hover,
