@@ -65,6 +65,8 @@
 
   border: none;
   border-radius: 4px;
+
+  transition: background-color 250ms var(--cubic);
 }
 
 .hero-button:hover,
@@ -183,6 +185,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: background-color 250ms var(--cubic);
 }
 
 .social-list-link:hover,
@@ -192,6 +195,7 @@
 
 .social-list-icon {
   fill: var(--logo-color);
+  transition: fill 250ms var(--cubic);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -222,10 +226,12 @@
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border 250ms var(--cubic);
 }
 
 .client-icon {
   fill: var(--logo-color);
+  transition: fill 250ms var(--cubic);
 }
 
 .client-link:hover,

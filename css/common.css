@@ -9,6 +9,8 @@
   --hoverfocus-color: #2196f3;
   --logo-color: #afb1b8;
   --social-links-background-color: rgba(255, 255, 255, 0.1);
+  --overlay: rgba(33, 150, 243, 0.9);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -75,6 +77,8 @@ body {
   margin-right: auto;
 }
 
+/*----------header----------*/
+
 .page-header,
 .header .page-navigation,
 .header .site-nav,
@@ -126,12 +130,16 @@ body {
 
 .header-link,
 .connection-link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: color 250ms var(--cubic);
 }
 
 .connection-icon {
   fill: var(--foreground-color2);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition-property: fill; */
+  transition: fill 250ms var(--cubic);
 }
 
 .connection-link:hover .connection-icon,
@@ -164,11 +172,7 @@ body {
 }
 
 .header .link:hover,
-.header .link:focus,
-.footer .link-map:hover,
-.footer .link-map:focus,
-.footer .link-contact:hover,
-.footer .link-contact:focus {
+.header .link:focus {
   color: var(--hoverfocus-color);
 }
 
@@ -202,22 +206,30 @@ body {
   row-gap: 9px;
 }
 
-.footer .link-map,
-.footer .link-contact {
+.footer-link-map,
+.footer-link-contact {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+  transition: color 250ms var(--cubic);
 }
 
-.footer .link-map {
+.footer-link-map {
   color: var(--foreground-color3);
 }
 
-.footer .link-contact {
+.footer-link-contact {
   color: rgb(255, 255, 255, 0.6);
+}
+
+.footer-link-map:hover,
+.footer-link-map:focus,
+.footer-link-contact:hover,
+.footer-link-contact:focus {
+  color: var(--hoverfocus-color);
 }
 
 .our-socials {
@@ -242,13 +254,14 @@ body {
 }
 
 .our-socials-item-link {
+  background: var(--social-links-background-color);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--social-links-background-color);
+  transition: background-color 250ms var(--cubic);
 }
 
 .our-socials-item-icon {
