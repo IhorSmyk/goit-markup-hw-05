@@ -22,7 +22,6 @@
   </head>
 
   <body>
-
     <!----------header---------->
 
     <header class="header">
@@ -62,7 +61,7 @@
     <main>
       <section class="hero">
         <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-button" type="button">Замовити послугу</button>
+        <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
       </section>
 
       <!----------features---------->
@@ -123,16 +122,25 @@
 
       <section class="about-job section">
         <div class="container">
-          <h2 class="title">Чим ми займаємося</h2>
-          <ul class="list">
-            <li class="item">
-              <img src="./images/indexpics/box1.jpg" alt="фото процесу роботи 1" width="370" />
+          <h2 class="job-title title">Чим ми займаємося</h2>
+          <ul class="job-list list">
+            <li class="job-item item">
+              <div class="job-item-thumb">
+                <img src="./images/indexpics/box1.jpg" alt="фото процесу роботи 1" width="370" />
+                <p class="job-item-overlay-text">Десктопні додатки</p>
+              </div>
             </li>
-            <li class="item">
-              <img src="./images/indexpics/box2.jpg" alt="фото процесу роботи 2" width="370" />
+            <li class="job-item item">
+              <div class="job-item-thumb">
+                <img src="./images/indexpics/box2.jpg" alt="фото процесу роботи 2" width="370" />
+                <p class="job-item-overlay-text">Мобільні додатки</p>
+              </div>
             </li>
-            <li class="item">
-              <img src="./images/indexpics/box3.jpg" alt="фото процесу роботи 3" width="370" />
+            <li class="job-item item">
+              <div class="job-item-thumb">
+                <img src="./images/indexpics/box3.jpg" alt="фото процесу роботи 3" width="370" />
+                <p class="job-item-overlay-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -375,7 +383,9 @@
                 >
               </li>
               <li>
-                <a class="footer-link-contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="footer-link-contact link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li>
                 <a class="footer-link-contact link" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -419,5 +429,19 @@
         </div>
       </div>
     </footer>
+
+    <!----------backdrop----------->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-btn-icon" width="18" height="18">
+            <use href="./images/icons/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

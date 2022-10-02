@@ -22,8 +22,8 @@
   min-width: 74px;
   padding: 6px 22px;
   border-radius: 4px;
-  transition: color 250ms var(--cubic), 
-  background-color 250ms var(--cubic);
+  transition: color var(--transition-dur-and-func), 
+  background-color var(--transition-dur-and-func);
 }
 
 .buttons-sort:hover,
@@ -45,7 +45,7 @@
 
 .projects-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
-  transition: box-shadow 250ms var(--cubic);
+  transition: box-shadow var(--transition-dur-and-func);
 }
 
 .projects-item-wrapper {
@@ -88,7 +88,7 @@
   top: 0;
   left: 0;
   transform: translateY(100%);
-  transition: transform 250ms var(--cubic);
+  transition: transform var(--transition-dur-and-func);
   background-color: var(--overlay);
   font-style: normal;
   font-weight: 400;
