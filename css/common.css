@@ -80,14 +80,18 @@ body {
 /*----------header----------*/
 
 .page-header,
-.header .page-navigation,
-.header .site-nav,
-.header .contacts-nav {
+.page-navigation,
+.contacts-nav {
   display: flex;
   align-items: center;
 }
 
-.header .page-navigation {
+.site-nav {
+  display: flex;
+  align-items: baseline;
+}
+
+.page-navigation {
   column-gap: 94px;
 }
 
@@ -130,15 +134,11 @@ body {
 
 .header-link,
 .connection-link {
-  /* transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
   transition: color 250ms var(--cubic);
 }
 
 .connection-icon {
   fill: var(--foreground-color2);
-  /* transition-property: fill; */
   transition: fill 250ms var(--cubic);
 }
 
@@ -147,10 +147,19 @@ body {
   fill: var(--hoverfocus-color);
 }
 
-/*підвищив специфічність до трьох тегів,
- бо інакше правило не працює */
-.header .site-nav .current {
+.header .current {
   color: var(--hoverfocus-color);
+}
+
+.header .current::after {
+  background: var(--hoverfocus-color);
+  content: '';
+  display: block;
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  top: 77px;
+  border-radius: 2px;
 }
 
 .site-nav .link {
